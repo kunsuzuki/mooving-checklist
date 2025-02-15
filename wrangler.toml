@@ -3,7 +3,10 @@ compatibility_date = "2024-02-15"
 
 [build]
 command = "npm run build"
-node_compat = true  # Node.js互換モードを有効化
+node_version = "20.0.0"  # Node.jsバージョンを明示的に指定
+
+[build.environment]
+NODE_VERSION = "20.0.0"  # 環境変数としても設定
 
 [build.upload]
 format = "service-worker"
