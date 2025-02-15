@@ -3,13 +3,25 @@ compatibility_date = "2024-02-15"
 
 [build]
 command = "npm run build"
-node_version = "20.0.0"  # Node.jsバージョンを明示的に指定
+node_version = "20.0.0"
 
 [build.environment]
-NODE_VERSION = "20.0.0"  # 環境変数としても設定
+NODE_VERSION = "20.0.0"
 
-[build.upload]
-format = "service-worker"
+# Next.js用の設定を追加
+[build.processing]
+skip_missing = true
 
-[site]
-bucket = ".next" 
+[build.processing.html]
+keep_data_url = true
+
+[build.processing.css]
+bundle = true
+minify = true
+
+[build.processing.js]
+bundle = true
+minify = true
+
+[build.processing.images]
+compress = true 
