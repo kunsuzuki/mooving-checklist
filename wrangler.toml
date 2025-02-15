@@ -3,6 +3,7 @@ compatibility_date = "2024-02-15"
 
 [build]
 command = "npm run build"
+node_compat = true  # Node.js互換モードを有効化
 
 [build.upload]
 format = "service-worker"
