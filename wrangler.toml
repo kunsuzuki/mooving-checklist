@@ -1,5 +1,11 @@
 name = "moving-checklist"
 compatibility_date = "2024-02-15"
 
+[build]
+command = "npm run build"
+
+[build.upload]
+format = "service-worker"
+
 [site]
 bucket = ".next" 
